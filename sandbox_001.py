@@ -90,7 +90,9 @@ class SayHelloButton(QPushButton):
             # print('display={}'.format(display_func))
             self.clicked.connect(lambda: display_func('Hello World!'))
         else:
-            self.clicked.connect(lambda: print("Hello World!"))
+            def print_hi():
+                print("Hello World!")
+            self.clicked.connect(lambda: print_hi())
 
 
 class SayGoodbyeButton(QPushButton):
@@ -100,7 +102,9 @@ class SayGoodbyeButton(QPushButton):
             # print('display={}'.format(display_func))
             self.clicked.connect(lambda: display_func('Goodbye Cruel World!!!'))
         else:
-            self.clicked.connect(lambda: print("Goodbye Cruel World!!!"))
+            def print_bye():
+                print("Goodbye Cruel World!!!")
+            self.clicked.connect(lambda: print_bye())
 
 
 if __name__ == "__main__":
