@@ -92,7 +92,7 @@ class SayHelloButton(QPushButton):
         else:
             def print_hi():
                 print("Hello World!")
-            self.clicked.connect(lambda: print_hi())
+            self.clicked.connect(print_hi)
 
 
 class SayGoodbyeButton(QPushButton):
@@ -104,7 +104,7 @@ class SayGoodbyeButton(QPushButton):
         else:
             def print_bye():
                 print("Goodbye Cruel World!!!")
-            self.clicked.connect(lambda: print_bye())
+            self.clicked.connect(print_bye)
 
 
 if __name__ == "__main__":
