@@ -10,7 +10,7 @@ class Tmp_APP(QMainWindow):
 
     def __init__(self):
         ''' '''
-        super().__init__()
+        super(Tmp_APP, self).__init__()
         self.groupboxes = OrderedDict()
         self.outputs = OrderedDict()
         self.inputs = OrderedDict()
